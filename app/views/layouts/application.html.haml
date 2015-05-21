@@ -33,14 +33,13 @@
             %button.btn.btn-default{ type: "submit" }
               %i.glyphicon.glyphicon-search
 
-    .container.main-container
+    .main-container
       - flash.each do |name, msg|
         %div{:class => "alert alert-#{name == "notice" ? "success" : "danger"}"}
           %a.close{"data-dismiss" => "alert"} ×
           = msg
-      .row
-        .col-sm-12
-          = yield
+
+      = yield
     %footer
       .container
         %p

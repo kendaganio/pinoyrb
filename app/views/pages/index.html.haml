@@ -1,52 +1,63 @@
 - build_meta_tags
-.jumbotron
-  .pull-right.ruby-logo
-    = render :partial => "ruby_logo"
-  %h1 Philippine Ruby Users Group
-  %p 
-    %em (aka PhRUG, PinoyRb, Ruby-Philippines)
-  %p We're a bunch of professionals and hobbyists who share a passion in programming with Ruby.
 
-.row.front-columns
-  .col-md-4
-    %h2 Know the local scene
-    %p 
-      Want to know who uses Ruby in the Philippines? Connect with the community via:
-    %ul.community-links
-      %li
-        = link_to "http://www.meetup.com/ruby-phil/" do
-          %span.fa.fa-users
-          Meetup.com
-        (sign-up to receive notifications)
-      %li
-        = link_to "http://phackers-slack.herokuapp.com/" do
-          %span.fa.fa-slack
-          Slack
-        (Philippine Tech Hackers #phrug)
-      %li
-        = link_to "irc://irc.freenode.net/phrug" do
-          %span.fa.fa-comments
-          IRC
-        (Freenode #phrug)
-      %li
-        = link_to "http://www.facebook.com/groups/phrug/" do
-          %span.fa.fa-facebook
-          Facebook Group
-      %li 
-        = link_to "https://groups.google.com/forum/#!forum/ruby-phil" do
-          %span.fa.fa-envelope
-          Google Group
-  .col-md-4
-    %h2 Join our meetups
-    %p We hold meetups every third Thursday of the month. 
-    %p There we talk about all things related to Ruby and Rails, network over pizza, and afterwards we go out for a drink.
-    %p 
-      Our next meetup is on
-      %strong= next_meetup(@next_meetup)
-    %p= link_to "Find out more about our events", events_url, :class => "btn btn-default btn-lg"
-  .col-md-4
-    %h2 Learn Ruby and Rails
-    %p Want to learn Ruby and Rails but don't know which among the many online resources out there are actually good? 
-    %p= link_to "We've got you covered.", learn_url, :class => "btn btn-default btn-lg"
-    
+.jumbotron
+  .container
+    .row
+      .ruby-logo.text-center
+        = render :partial => "ruby_logo"
+    .row.text-center
+      %h1 Philippine Ruby Users Group
+      .copy
+        %h3 We're a bunch of professionals and hobbyists who share a passion in programming with Ruby.
+        %p
+          %em (aka PhRUG, PinoyRb, Ruby-Philippines)
+    .row.down
+      %a{href: ''}
+        %i.fa.fa-chevron-down
+
+.container
+  .row.front-columns
+    .col-md-4
+      %h2 Know the local scene
+      %p 
+        Want to know who uses Ruby in the Philippines? Connect with the community via:
+      %ul.community-links
+        %li
+          = link_to "http://www.meetup.com/ruby-phil/" do
+            %span.fa.fa-users
+            Meetup.com
+          (sign-up to receive notifications)
+        %li
+          = link_to "http://phackers-slack.herokuapp.com/" do
+            %span.fa.fa-slack
+            Slack
+          (Philippine Tech Hackers #phrug)
+        %li
+          = link_to "irc://irc.freenode.net/phrug" do
+            %span.fa.fa-comments
+            IRC
+          (Freenode #phrug)
+        %li
+          = link_to "http://www.facebook.com/groups/phrug/" do
+            %span.fa.fa-facebook
+            Facebook Group
+        %li 
+          = link_to "https://groups.google.com/forum/#!forum/ruby-phil" do
+            %span.fa.fa-envelope
+            Google Group
+    .col-md-4
+      %h2 Join our meetups
+      %p We hold meetups every third Thursday of the month. 
+      %p There we talk about all things related to Ruby and Rails, network over pizza, and afterwards we go out for a drink.
+      %p 
+        Our next meetup is on
+        %strong= next_meetup(@next_meetup)
+      .text-center.cta
+        %p= link_to "Find out more about our events", events_url, :class => "btn btn-default btn-lg"
+    .col-md-4
+      %h2 Learn Ruby and Rails
+      %p Want to learn Ruby and Rails but don't know which among the many online resources out there are actually good? 
+      .text-center.cta
+        %p= link_to "We've got you covered.", learn_url, :class => "btn btn-default btn-lg"
+      
 
